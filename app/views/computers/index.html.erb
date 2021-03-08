@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Teddies</h1>
+  <div class="row">
+    <% @computers.each do |computer| %>
+      <div class="col-6 col-md-4">
+        <div class="card">
+          <%= image_tag computer.photo_url , class: "card-img-top" %>
+          <div class="card-body">
+            <h5 class="card-title"><%= computer.name %></h5>
+            <p class="card-text"><%= computer.category.name %></p>
+            <%= link_to "More details", computer_path(computer), class: "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
