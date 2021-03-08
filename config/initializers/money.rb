@@ -2,11 +2,10 @@
 Money.locale_backend = :currency
 
 MoneyRails.configure do |config|
-  config.default_currency = :eur  # or :gbp, :usd, etc.
   
   # To set the default currency
   #
-  # config.default_currency = :usd
+   config.default_currency = :eur  # or :gbp, :usd, etc.
 
   # Set default bank object
   #
@@ -50,8 +49,8 @@ MoneyRails.configure do |config|
   # Example:
   # config.register_currency = {
   #   priority:            1,
-  #   iso_code:            "EU4",
-  #   name:                "Euro with subunit of 4 digits",
+  #   iso_code:            "EU8",
+  #   name:                "Euro with subunit of 8 digits",
   #   symbol:              "€",
   #   symbol_first:        true,
   #   subunit:             "Subcent",
@@ -87,12 +86,16 @@ MoneyRails.configure do |config|
 
   # If you would like to use I18n localization (formatting depends on the
   # locale):
+
   # config.locale_backend = :i18n
-  #
+  # I18n.locale = :eur
+  # format = I18n.t :format, scope: 'number.currency.format'
+  # Money.new(10_00, 'EUR').format(format: format) # => 10,00 €
+  
   # Example (using default localization from rails-i18n):
-  #
-  # I18n.locale = :en
-  # Money.new(10_000_00, 'USD').format # => $10,000.00
+  
+  # I18n.locale = :es
+  #  Money.new(10_000_00, 'USD').format # => $10,000.00
   # I18n.locale = :es
   # Money.new(10_000_00, 'USD').format # => $10.000,00
   #

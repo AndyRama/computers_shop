@@ -8,7 +8,7 @@
           <div class="card-body">
             <h5 class="card-title"><%= computer.name %></h5>
             <p class="card-text"><%= computer.category.name %></p>
-            <p>Amount: <%= humanized_money_with_symbol(computer.price_cents) %></p>
+            <p>Prix: <%= computer.price %>€</p>
             <%= link_to "More details", computer_path(computer), class: "btn btn-primary" %>
           </div>
         </div>
