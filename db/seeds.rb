@@ -10,7 +10,7 @@ mini = Category.create!(name: 'mini')
 
 puts 'Creating computers...'
 
-computer1 = Computer.new(sku: 'nanopc2', name: 'Odroid Xu4', category: nano, photo_url: 'https://www.kubii.fr/7105-large_default/carte-odroid-xu4-avec-heat-sink-kubii.jpg', price_cents: '7999')
+computer1 = Computer.new(sku: 'nanopc2', name: 'Odroid Xu4', category: nano, photo_url: 'https://www.kubii.fr/7105-large_default/carte-odroid-xu4-avec-heat-sink-kubii.jpg', price_cents: '100')
 if computer1.save
    puts '.'
 else
