@@ -41,7 +41,7 @@ gem 'stripe'
 gem 'stripe_event'
 
 #local web server to the internet
-gem 'ngrok', '~> 1.6', '>= 1.6.1'
+# gem 'ngrok', '~> 1.6', '>= 1.6.1'
 
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
