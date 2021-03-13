@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   root 'computers#index'
   resources :computers, only: [:index, :show]
 
-  resources :orders, only: [:show, :create]
+  resources :orders, only: [:show, :create] do
+    resources :payments, only: :new
+  end
 end
