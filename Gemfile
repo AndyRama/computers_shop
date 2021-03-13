@@ -36,6 +36,7 @@ gem 'simple_form'
 
 # Payment system
 gem 'money-rails'
+
 gem 'stripe'
 gem 'stripe_event'
 
