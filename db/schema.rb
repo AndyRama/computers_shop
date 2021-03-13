@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_08_154011) do
+ActiveRecord::Schema.define(version: 2021_03_13_163550) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,19 @@ ActiveRecord::Schema.define(version: 2021_03_08_154011) do
     t.index ["category_id"], name: "index_computers_on_category_id"
   end
 
+  create_table "orders", force: :cascade do |t|
+    t.string "state"
+    t.string "computer_sku"
+    t.integer "amount_cents", default: 0, null: false
+    t.string "checkout_session_id"
+    t.bigint "user_id", null: false
+    t.bigint "computer_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["computer_id"], name: "index_orders_on_computer_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -45,4 +58,6 @@ ActiveRecord::Schema.define(version: 2021_03_08_154011) do
   end
 
   add_foreign_key "computers", "categories"
+  add_foreign_key "orders", "computers"
+  add_foreign_key "orders", "users"
 end
