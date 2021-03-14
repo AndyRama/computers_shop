@@ -1,7 +1,7 @@
 # db/seeds.rb
 puts 'Cleaning database...'
-Computer.destroy_all
-Category.destroy_all
+# Computer.destroy_all
+# Category.destroy_all
 
 puts 'Creating categories...'
 tour = Category.create!(name: 'tour')
