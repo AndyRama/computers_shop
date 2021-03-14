@@ -24,7 +24,7 @@ else
    puts'_'
 end
 
-computer3 = Computer.new(sku: 'minipc2', name: 'NUC-CEL-4-S4', category: mini, photo_url: 'https://media.ldlc.com/r374/ld/products/00/05/66/33/LD0005663351_2.jpg', price_cents: '23894')
+computer3 = Computer.new(sku: 'minipc2', name: 'NUC-CEL-4-S4', category: mini, photo_url: 'https://media.ldlc.com/r374/ld/products/00/05/66/33/LD0005663351_2.jpg', price_cents: '100')
 if computer3.save
    puts '.'
 else
