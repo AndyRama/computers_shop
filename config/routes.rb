@@ -7,7 +7,5 @@ Rails.application.routes.draw do
     resources :payments, only: :new
   end
      
-  resources :charges, only:[:new, :create]
-
   mount StripeEvent::Engine, at: '/stripe-webhooks'
 end
