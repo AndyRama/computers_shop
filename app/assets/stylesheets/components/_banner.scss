@@ -1,18 +1,23 @@
+#title {
+margin: 0;
+padding-top: 50px;
+padding-left: 20px;
+}
+
 .banner {
   background-size: cover;
-  background-position: center;
-  padding: 150px 0;
+  padding:25px 0;
   background-repeat: no-repeat;
   height:700px;
-  background-position: sticky;
+  background-image: asset-url('recalbox-banner.png');
 }
 
 .banner h1 {
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
-  font-weight: bold;
+  font-size: 48px;
+  font-weight: bolder;
 }
 
 .banner p {
@@ -27,9 +32,13 @@
   border-radius: 4px;
   background: #1EDD88;
   transition: background 0.3s ease;
+  // opacity: 0.8;
+font-weight: 600;
+font-size: 24px;
 }
 
 .btn-flat:hover {
   background: #1BCB7F;
   color: white;
+  // opacity: 1;
 }
