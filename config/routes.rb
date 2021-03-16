@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'pages#home'
+  root 'computers#index'
   resources :computers, only: [:index, :show]
 
   resources :orders, only: [:show, :create] do
