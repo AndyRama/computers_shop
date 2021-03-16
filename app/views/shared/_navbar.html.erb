@@ -12,10 +12,10 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item">
-          <%= link_to "Home", "computers#home", class: "nav-link" %>
+          <%= link_to "Home", "/", class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Panier", "#", class: "nav-link" %>
+          <%= link_to "Panier", "pages#home", class: "nav-link" %>
         </li>
         <li class="nav-item">
           <%= link_to "RecalBox", "https://www.recalbox.com/fr/", target:"blank", class: "nav-link" %>
